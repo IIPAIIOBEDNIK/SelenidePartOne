@@ -10,10 +10,6 @@ compileTestJava {
     options.encoding = 'UTF-8'
 }
 
-//Используемая версия Java
-sourceCompatibility = 11
-targetCompatibility = 11
-
 dependencies {
     // Selenide
     testImplementation("com.codeborne:selenide:5.22.3")
