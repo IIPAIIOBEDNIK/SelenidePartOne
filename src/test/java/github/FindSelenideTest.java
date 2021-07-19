@@ -22,7 +22,7 @@ public class FindSelenideTest {
         //Открыть страницу гитхаб
         open("https://github.com");
         //Вводим selenide в строку поиска
-        $("[name=q]").setValue("drag_and_drop").pressEnter();
+        $("[name=q]").setValue("drug_and_drop").pressEnter();
         $$(".repo-list").first().$("a").click();
         //Переходим в Wiki
         $("[data-content = Wiki").click();
