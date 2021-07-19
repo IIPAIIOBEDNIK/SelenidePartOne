@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Configuration.startMaximized;
 import static com.codeborne.selenide.Selenide.*;
 
-public class DrugAndDrop {
+public class DrugAndDropTest {
 
     @BeforeAll
     static void setup(){
@@ -17,12 +17,12 @@ public class DrugAndDrop {
     }
 
     @Test
-    void checkDrugAndDrop(){
+    void checkDrugAndDropTest(){
         //Открываем
         open("https://the-internet.herokuapp.com/drag_and_drop");
         //Переносим квадрат А на квадрат В
         $("#column-a").dragAndDropTo($("#column-b"));
         //Проверяем, что они поменялись местами
-        $("#column-a header").shouldHave(text("B"));
+        $("#column-a").shouldHave(text("B"));
     }
 }

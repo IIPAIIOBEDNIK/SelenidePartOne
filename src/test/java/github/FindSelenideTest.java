@@ -18,11 +18,11 @@ public class FindSelenideTest {
     }
 
     @Test
-    void shouldFindSelenideRepository() {
+    void shouldFindSelenideRepositoryTest() {
         //Открыть страницу гитхаб
         open("https://github.com");
         //Вводим selenide в строку поиска
-        $("[name=q]").setValue("drug_and_drop").pressEnter();
+        $("[name=q]").setValue("Selenide").pressEnter();
         $$(".repo-list").first().$("a").click();
         //Переходим в Wiki
         $("[data-content = Wiki").click();
