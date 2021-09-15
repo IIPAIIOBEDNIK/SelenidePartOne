@@ -22,7 +22,7 @@ public class FindSelenideTest {
         //Открыть страницу гитхаб
         open("https://github.com");
         //Вводим selenide в строку поиска
-        $("[name=q]").setValue("Selenide").pressEnter();
+        $("[name=q]", 6).setValue("Selenide").pressEnter();
         $$(".repo-list").first().$("a").click();
         //Переходим в Wiki
         $("[data-content = Wiki").click();
@@ -31,5 +31,6 @@ public class FindSelenideTest {
         $(".wiki-rightbar").shouldHave(text("SoftAssertions"))
                 .$(byText("SoftAssertions")).click();
         $(".markdown-body").shouldHave(text("Using JUnit5 extend test class:"));
+        $(".markdown-body").shouldHave(text("@ExtendWith({SoftAssertsExtension.class})"));
     }
 }

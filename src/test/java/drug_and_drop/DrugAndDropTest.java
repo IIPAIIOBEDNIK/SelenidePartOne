@@ -1,5 +1,6 @@
 package drug_and_drop;
 
+import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
